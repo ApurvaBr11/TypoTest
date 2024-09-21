@@ -1,6 +1,5 @@
 import React, { useState, useEffect, Dispatch, SetStateAction } from "react";
-import Footer from "./Footer";
-import Header from "./Header";
+import Slider from "./Slider";
 
 type SetValue<T> = Dispatch<SetStateAction<T>>;
 
@@ -40,14 +39,16 @@ function Layout({ children }: Props) {
   }, [theme]);
 
   return (
-    <div className='d-flex flex-column vh-100'>
-      <Header handleThemeMode={handleThemeMode} theme={theme} />
-      <main className='flex-shrink-0 main'>
+    <div className=' bgr'>
+      <div className="slider" style={{ flexBasis: '50%' }}>
+        <Slider />
+      </div>
+      <main className="main" style={{ flexBasis: '50%' }}>
         <div className='container'>{children}</div>
       </main>
-      <Footer theme={theme} />
     </div>
   );
+  
 }
 
 export default Layout;

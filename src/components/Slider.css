@@ -1,0 +1,47 @@
+.slidermain {
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide overflow */
+  position: relative;
+}
+
+.slider-content {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  height: fit-content; /* Allow height to grow */
+}
+
+.slidercard {
+  height: 300px; /* Fixed height for each card */
+  display: flex;
+  padding: 5px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  background: #000000; /* Light background */
+  border: 1px solid #dee2e6; /* Border */
+  margin: 4px 2px; /* No margin between cards */
+  transition: transform 0.2s;
+}
+
+
+
+.slidercontent {
+  width: 100%; /* Full width for images and videos */
+  height: 100%; /* Full height for images and videos */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  padding: 0; /* Remove padding for images and videos */
+  text-align: center; /* Center the text */
+}
+
+/* Additional responsive styles */
+@media (max-width: 768px) {
+  .slidercard {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .slidercard {
+    height: 150px; /* Further adjust height for very small screens */
+  }
+}

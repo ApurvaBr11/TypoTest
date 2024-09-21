@@ -23,8 +23,8 @@ function Result({
 }: Props) {
   return (
     <>
-      <div className='result'>
-        <h6 className='mb-3'>Result</h6>
+      <div className='res'>
+        <h6 className=''>Result</h6>
         <div className='row g-2 py-4'>
           <State title='WPM' value={wpm} />
           <State title='CPM' value={wpm * 5} />
@@ -36,7 +36,7 @@ function Result({
             symbol='%'
           />
         </div>
-        <div className='speed-meter pt-4'>
+        <div className='speed-meter'>
           <h6 className='mb-3'>Average Typing Speeds</h6>
           <div className='row g-0 text-white meter-gauge'>
             <span className={`col-md col-sm-6 slow${wpm > 0 && wpm < 21 ? " border" : ""}`}>

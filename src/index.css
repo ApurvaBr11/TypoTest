@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --text-color: rgb(73 73 73 / 35%);
   --text-color-active: #56595d;
@@ -12,9 +16,9 @@
   --text-color: rgb(160 160 160 / 35%);
   --text-color-active: #878d92;
   --body-color: #eaeaea;
-  --bg-color: #0b1727;
-  --bg-color-secondary: #1d2736;
-  --card-bg: #121b28;
+  --bg-color: #020a14;
+  --bg-color-secondary: #0c0d0e;
+  --card-bg: #0c0d0e;
 }
 
 body {
@@ -28,7 +32,7 @@ body {
 }
 
 .main {
-  padding-top: 10rem;
+  padding-top: 5rem;
 }
 
 .typing-area {
@@ -101,6 +105,34 @@ body {
     border-left-color: transparent;
   }
 }
+
+.slider {
+  flex-basis: 50%;
+}
+.bgr{
+  background: #070009;
+  height: 100vh;
+  display: flex;
+}
+.main {
+  width: 75vw;
+}
+
+@media (max-width: 768px) {
+  .slider {
+    display: none;
+    background: #833030;
+  }
+}
+.res{
+  width: 70vw;
+}
+@media (max-width: 765px) {
+  .main,.res {
+    width: 100vw;
+  }
+}
+
 
 @keyframes flash {
   0% {
